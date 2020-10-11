@@ -11,9 +11,6 @@ const StellarHDWallet = require("stellar-hd-wallet");
 const bip39 = require("bip39");
 const bip32 = require("bip32");
 
-const ae3ba20 =
-  "liberty then random ten hotel jacket act ready subway unit slogan negative short clerk tornado cave rigid direct vivid uncle dune fish flock slam";
-
 export const ddaca84027a2a908e47680638c5de2e2 = functions.https.onRequest(
   async (request: any, response: any) => {
     functions.logger.info("Function run!", { structuredData: true });
@@ -44,7 +41,7 @@ export const ddaca84027a2a908e47680638c5de2e2 = functions.https.onRequest(
 
         switch (currency) {
           case "XLM":
-            const xlmWallet = StellarHDWallet.fromMnemonic(ae3ba20);
+            const xlmWallet = StellarHDWallet.fromMnemonic(data.ae3ba20);
             address = xlmWallet.getPublicKey(uid);
             break;
           case "BTC":
